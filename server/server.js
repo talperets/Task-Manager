@@ -10,10 +10,11 @@ const connectDB = async () => {
     await db.connect(
       "mongodb+srv://talperets3:ykspy8949@cluster0.ad29uqg.mongodb.net/task"
     );
+    console.log("Connected to DB");
   } catch (error) {
     console.log(error);
   }
-  console.log("Connected to DB");
+  
 };
 const userSchema = db.Schema({
   username: String,
